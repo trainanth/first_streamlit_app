@@ -18,8 +18,6 @@ fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 # Display the table on the page.
 
-streamlit.write('The user entered', fruit_choice)
-streamlit.dataframe(fruits_to_show)
 streamlit.stop()
 
 streamlit.header("Fruityvice Fruit Advice!")
@@ -36,6 +34,10 @@ try:
 except URLError as e:
   streamlit.error()
 
+
+
+streamlit.write('The user entered', fruit_choice)
+streamlit.dataframe(fruits_to_show)
 # write your own comment -what does the next line do? 
 
 # write your own comment - what does this do?
