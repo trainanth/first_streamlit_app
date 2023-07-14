@@ -48,9 +48,6 @@ streamlit.dataframe(fruits_to_show)
 # write your own comment - what does this do?
 
 
-
-my_cur = my_cnx.cursor()
-
 def get_fruit_load_list():
     with my_cnx.cursor() as my_cur:
       my_cur.execute("select * from fruit_load_list")
